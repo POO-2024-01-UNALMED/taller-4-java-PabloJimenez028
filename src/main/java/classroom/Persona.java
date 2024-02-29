@@ -2,15 +2,19 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
-    String nombre;
+    private long cedula; //final, no puede ser final porque el final es para no poder cambiar la cedula //
+    private String nombre;
     static int totalPersonas;
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3//
     }
+    //creacion del constructor persona()
 
+    public Persona() {
+    
+    }	
     public Persona(long cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
@@ -18,8 +22,9 @@ public class Persona {
     }
     
     public Persona(String nombre, long cedula) {
-        this.cedula = cedula;
-        this.nombre = nombre;
+    	this.nombre = nombre;
+    	this.cedula = cedula;
+        
         totalPersonas++;
     }
 
@@ -30,6 +35,7 @@ public class Persona {
     }
 
     public Persona(String nombre) {
+    	this.cedula = 3;
         this.nombre = "";
         totalPersonas++;
     }
@@ -44,5 +50,11 @@ public class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+        
+    //puede faltar el metodo setCedula//    
+        
+        
     }
+    
+    
 }

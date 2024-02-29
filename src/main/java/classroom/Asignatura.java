@@ -1,28 +1,30 @@
 package classroom;
 
-public class Asignatura {
+import classroom.Tipo.TipoPrueba;
 
+public class Asignatura {
+	
     public String nombre;
-    String n = nombre;
+    String n = nombre; //esto pa q
     public int codigoInterno;
     public int codigoExterno;
-    public Tipo tipo;
+    public Tipo tipo; //Añadi .TipoPrueba
 
     public Asignatura() {
-        this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
+    	this("Sin nombre", 0, 0, null);
+        //this(0); esto pa q x2
     }
 
-    public Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
+    public Asignatura(Tipo tipo,int codigoInterno) { //intercambie los parametros tipo y codigo Interno de los parametros
+        this("Sin nombre", codigoInterno, 0, tipo);
     }
-
+        
     public Asignatura(int codigoExterno,Tipo tipo) {
-        this("Sin nombre", 0, codigoExterno,tipo);
+    	this("Sin nombre", 0, codigoExterno,tipo); 
     }
 
     public Asignatura(String nombre, Tipo tipo) {
-        this(nombre, 0, 0,tipo);
+        this(nombre, 0, 0, tipo); //cuando falta el Codigo externo e interno
     }
 
     public Asignatura(String nombre, int codigoInterno, int codigoExterno,Tipo tipo) {
