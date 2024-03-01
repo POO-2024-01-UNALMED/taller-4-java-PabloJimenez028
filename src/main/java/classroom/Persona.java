@@ -2,7 +2,7 @@ package classroom;
 
 public class Persona {
 
-    private long cedula; //final, no puede ser final porque el final es para no poder cambiar la cedula //
+    public long cedula; //final, no puede ser final porque el final es para no poder cambiar la cedula //
     private String nombre;
     static int totalPersonas;
     
@@ -35,8 +35,8 @@ public class Persona {
     }
 
     public Persona(String nombre) {
-    	this.cedula = 3;
-        this.nombre = "";
+    	this.cedula = 1;
+        this.nombre = nombre;
         totalPersonas++;
     }
     

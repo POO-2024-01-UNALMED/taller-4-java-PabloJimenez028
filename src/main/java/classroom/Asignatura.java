@@ -1,17 +1,17 @@
 package classroom;
 
-import classroom.Tipo.TipoPrueba;
+//import classroom.Tipo;
 
 public class Asignatura {
 	
     public String nombre;
     String n = nombre; //esto pa q
-    public int codigoInterno;
+    public int codigoInterno;//public
     public int codigoExterno;
     public Tipo tipo; //Añadi .TipoPrueba
 
     public Asignatura() {
-    	this("Sin nombre", 0, 0, null);
+    	this("Sin nombre", 0, 0, Tipo.FUNDAMENTACION);
         //this(0); esto pa q x2
     }
 
@@ -41,9 +41,9 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    public void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
+    //public void cambiarDatos(int codigoInterno) {
+    //    this.codigoInterno = codigoInterno;}
+    
 
     public void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
@@ -57,7 +57,7 @@ public class Asignatura {
         this.codigoInterno = codigoInterno;
     }
     
-    public void setCodigoInterno(double codigoInterno) {
-        this.codigoInterno = (int) codigoInterno;
-    }
+    //public void setCodigoInterno(double codigoInterno) {
+    //    this.codigoInterno = (int) codigoInterno;
+    //}
 }
